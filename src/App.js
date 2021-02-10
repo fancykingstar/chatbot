@@ -7,7 +7,7 @@ const App = () => {
   const [hide, setHide] = useState(false)
   const [message, setMessage] = useState("")
   const goRegistration = () => {
-    window.location.href=`https://www.trustedbikebuyers.co.uk/value-your-bike/step1?vrm=${message}`;
+    window.location.href=`https://www.trustedbikebuyers.co.uk/value-your-bike/confirm-bike?vrm=${message}`;
   }
 
   const toggleChatBox = () => {
