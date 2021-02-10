@@ -1,9 +1,19 @@
 .chat-box.open .mm-chat-window {
-  display: flex;
+  visibility: visible;
 }
 
 .chat-box .mm-chat-window {
-  display: none;
+  visibility: hidden;
+}
+
+@keyframes fadeIn {
+  99% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+    transform-origin: bottom right;
+  }
 }
 
 .chat-box.open .button--square {
@@ -26,11 +36,11 @@
   visibility: visible;
   z-index: 2147483646;
   /* pointer-events: none; */
-  height: 600px;
+  height: 300px;
 }
 
 .app-container {
-  height: 600px;
+  height: 300px;
   width: 360px;
 }
 
@@ -62,7 +72,8 @@
 }
 
 .main.active {
-  visibility: visible;
+  animation: 1s fadeIn;
+  animation-fill-mode: forwards;
 }
 
 .window-heading {

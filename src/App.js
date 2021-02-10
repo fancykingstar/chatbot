@@ -5,8 +5,9 @@ import "./App.css"
 
 const App = () => {
   const [hide, setHide] = useState(false)
+  const [message, setMessage] = useState("")
   const goRegistration = () => {
-    window.location.href="https://www.trustedbikebuyers.co.uk/value-your-bike/step1?error=vrm-not-found&vrm=GV14VFN";
+    window.location.href=`https://www.trustedbikebuyers.co.uk/value-your-bike/step1?vrm=${message}`;
   }
 
   const toggleChatBox = () => {
@@ -26,7 +27,7 @@ const App = () => {
               <path fillRule="evenodd" clipRule="evenodd" d="M9.62525 8.42456L8.42531 9.6245L13.225 14.4242L8.42518 19.224L9.62512 20.4239L14.4249 15.6241L19.2248 20.4239L20.4247 19.224L15.6249 14.4242L20.4246 9.6245L19.2246 8.42456L14.4249 13.2242L9.62525 8.42456Z" fill="#0084FF"></path>
             </svg>
           </div>
-          <div className="main active">
+          <div className={clsx("main", hide && "active")}>
             <div className="window-heading">
               <div className="avatar">
                 <img
@@ -69,9 +70,10 @@ const App = () => {
                 <input
                   className="chat-input-area__input"
                   type="text"
+                  onChange={(e) => setMessage(e.target.value)}
                   onKeyDown={(e) => {
                     if (e.key === "Enter") {
-                      goRegistration();
+                      goRegistration()
                     }
                   }}
                 />
