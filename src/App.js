@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import clsx from "clsx"
 import CustomerImage from "./assets/customer-service-image.png"
 import "./App.css"
@@ -13,6 +13,12 @@ const App = () => {
   const toggleChatBox = () => {
     setHide(value => !value)
   }
+
+  useEffect(() => {
+    setTimeout(() => {
+      setHide(true)
+    }, [3000])
+  }, [])
 
   return (
     <div
@@ -46,7 +52,7 @@ const App = () => {
             <div className="chat-display">
               <div className="chat-display__messages">
                 <div className="chat-display__timestamp">
-              Today at 1:43 PM
+                  Just now
                 </div>
                 <div className="outgoing-message">
                   <div className="avatar outgoing-message__avatar">

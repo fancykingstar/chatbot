@@ -72,7 +72,7 @@
 }
 
 .main.active {
-  animation: 1s fadeIn;
+  animation: .2s fadeIn;
   animation-fill-mode: forwards;
 }
 
