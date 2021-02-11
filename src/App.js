@@ -22,7 +22,6 @@ const App = () => {
 
   return (
     <div
-      style={{width: "100vh", height: "100vh"}}
       className={clsx("chat-box", hide && "open")}
     >
       <div className="mm-chat-window">

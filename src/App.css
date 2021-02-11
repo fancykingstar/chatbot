@@ -36,12 +36,12 @@
   visibility: visible;
   z-index: 2147483646;
   /* pointer-events: none; */
-  height: 300px;
+  height: 320px;
 }
 
 .app-container {
-  height: 300px;
-  width: 360px;
+  height: 320px;
+  width: 300px;
 }
 
 .close-button {
@@ -57,7 +57,7 @@
   right: 0;
   top: 0;
   bottom: 0;
-  width: 360px;
+  width: 300px;
   margin-right: 10px;
   margin-bottom: 10px;
   display: flex;
